@@ -1,9 +1,15 @@
-import Image from "next/image";
+import Index from "@/pages";
+import Contact from "@/pages/contact";
+import Projects from "@/pages/projects";
+import Skills from "@/pages/skills";
 
 export default function Home() {
     return (
-        <div className="h-screen flex justify-center items-center">
-            <h1 className="text-4xl font-bold">HOME PAGE</h1>
+        <div className="">
+            <Index />
+            <Projects />
+            <Skills />
+            <Contact />
         </div>
     );
 }
