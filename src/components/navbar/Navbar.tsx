@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -36,13 +35,8 @@ const Navbar: React.FC = () => {
                             className="rounded-full mr-4"
                         />
                         <h1 className="text-2xl font-bold">
-                            <span className="text-3xl mr-[1px]">
-                                F
-                            </span>
-                            AIZAN{" "}
-                            <span className="text-3xl mr-[2px]">
-                                K
-                            </span>
+                            <span className="text-3xl mr-[1px]">F</span>
+                            AIZAN <span className="text-3xl mr-[2px]">K</span>
                             HAN
                         </h1>
                     </Link>
