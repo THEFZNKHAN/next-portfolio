@@ -22,7 +22,7 @@ const navItems = [
 
 const Navbar: React.FC = () => {
     return (
-        <div className="flex flex-row">
+        <div className="flex flex-row z-10">
             <div className="fixed h-2 w-full bg-bg_black" />
             <div className="fixed w-[1440px] mt-2 text-white bg-light_gray border p-4 py-4 px-5 flex justify-between items-center rounded-lg font-mono">
                 <div className="w-2/3">
