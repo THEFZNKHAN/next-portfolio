@@ -22,7 +22,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <div className="w-[1536px] m-auto pl-12 pr-12 min-h-screen flex flex-col justify-between max-2xl:w-[1280px] max-xl:w-[1024px] max-xl:pl-5 max-xl:pr-5 max-lg:w-[768px] max-md:w-[640px] max-sm:w-[475px] max-[475px]:w-[380px]">
                     <Navbar />
-                    <main className="flex-1 mt-[86px] mx-2">
+                    <main className="mx-2">
                         {children}
                     </main>
                     <Footer />

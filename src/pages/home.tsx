@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="h-[calc(100vh-86px)] border-b border-gray-600 flex justify-center items-center gap-24"
+            className="h-screen border-b border-gray-600 flex justify-center items-center gap-24"
         >
-            <div className="flex-1 flex flex-col items-center p-6">
+            <div className="flex-1 flex flex-col items-center p-6 mt-16">
                 <h1 className="text-5xl text-purple-500 font-bold">
                     - I&apos;m{" "}
                     <span className="text-6xl font-black font-mono ml-4">
@@ -39,7 +39,7 @@ const Home = () => {
                 </Link>
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 mt-16">
                 <Image
                     src="/icon.png"
                     alt="icon"
