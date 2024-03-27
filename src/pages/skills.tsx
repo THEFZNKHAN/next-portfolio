@@ -141,7 +141,7 @@ const Skills = () => {
                         key={category.name}
                         className="flex flex-col items-center border rounded-lg w-2/5 h-80"
                     >
-                        <div className="bg-purple-500 w-full rounded-t-lg border-b">
+                        <div className="bg-purple-600 w-full rounded-t-lg border-b">
                             <h1 className="text-3xl font-bold text-white my-4 bg-purple font-mono">
                                 {category.name}
                             </h1>
