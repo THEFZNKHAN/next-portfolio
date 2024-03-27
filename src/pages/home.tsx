@@ -29,9 +29,9 @@ const Home = () => {
                 </p>
                 <Link
                     href={"https://github.com/thefznkhan"}
-                    className="flex mt-6 px-4 py-2 border w-80 rounded-xl justify-center items-center hover:bg-purple-600 transition-all duration-300 ease-in-out"
+                    className="flex mt-6 px-4 py-2 border w-80 rounded-xl justify-center items-center hover:bg-purple-500 transition-all duration-300 ease-in-out"
                 >
-                    <p className="text-lg font-semibold">
+                    <p className="text-lg font-semibold font-sans">
                         Go to my Github Profile
                     </p>
                     <FaGithub className="text-4xl mx-3" />
@@ -45,7 +45,7 @@ const Home = () => {
                     alt="icon"
                     height={500}
                     width={500}
-                    className="ml-10 rounded-3xl border border-purple-600"
+                    className="ml-10 rounded-3xl shadow-md shadow-purple-500"
                 />
             </div>
         </div>

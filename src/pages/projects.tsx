@@ -70,14 +70,15 @@ const Projects = () => {
             className="h-auto pt-[86px] flex flex-col text-center pb-10 border-b border-gray-600"
         >
             <h1 className="text-6xl font-black mt-5 mb-10 text-purple-500 font-mono">
-                Projects
+                <span className="text-white">My</span> Projects
             </h1>
 
             <div className="flex flex-wrap justify-evenly">
                 {ProjectItems.map((item, index) => (
                     <div
                         key={index}
-                        className=" w-5/12 rounded-xl border h-[400px] m-4"
+                        className=" w-5/12 rounded-xl border h-[400px] my-6 shadow-md hover:shadow-purple-500 hover:shadow-md cursor-pointer"
+                        title={item.title}
                     >
                         <div className="h-4/5 relative">
                             <Image
