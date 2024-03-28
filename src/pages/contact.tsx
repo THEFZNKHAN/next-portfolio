@@ -77,7 +77,7 @@ const Contact = () => {
                             />
                             <button
                                 type="submit"
-                                className="text-lg rounded-lg border bg-purple-600 font-semibold text-text_gray py-1 px-6 flex items-center gap-2 hover:bg-purple-700"
+                                className="text-lg rounded-lg border bg-purple-600 font-semibold text-text_gray py-1 px-6 flex items-center gap-2 hover:bg-purple-700 hover:rounded-md transition-all delay-100"
                             >
                                 SEND{" "}
                                 <FaArrowAltCircleRight className="text-2xl" />

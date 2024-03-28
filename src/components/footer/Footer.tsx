@@ -13,21 +13,21 @@ const Footer = () => {
                     All rights reserved.
                 </h1>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row h-full items-center">
                 <Link href="https://github.com/thefznkhan">
-                    <FaGithub className="text-4xl text-text_gray p-2 mx-1 hover:rounded-full hover:text-black hover:bg-white" />
+                    <FaGithub className="text-4xl text-text_gray p-2 mx-1 hover:mb-3 transition-all delay-100" />
                 </Link>
                 <Link href="https://www.linkedin.com/in/thefznkhan/">
-                    <FaLinkedin className="text-4xl text-text_gray p-2 mx-1 hover:rounded-full hover:text-black hover:bg-white" />
+                    <FaLinkedin className="text-4xl text-text_gray p-2 mx-1 hover:mb-3 transition-all delay-100" />
                 </Link>
                 <Link href="https://twitter.com/THEFZNKHAN">
-                    <FaXTwitter className="text-4xl text-text_gray p-2 mx-1 hover:rounded-full hover:text-black hover:bg-white" />
+                    <FaXTwitter className="text-4xl text-text_gray p-2 mx-1 hover:mb-3 transition-all delay-100" />
                 </Link>
                 <Link href="https://discord.com/users/1156287168986218666">
-                    <FaDiscord className="text-4xl text-text_gray p-2 mx-1 hover:rounded-full hover:text-black hover:bg-white" />
+                    <FaDiscord className="text-4xl text-text_gray p-2 mx-1 hover:mb-3 transition-all delay-100" />
                 </Link>
                 <Link href="mailto:FKHAN20040@GMAIL.COM">
-                    <MdEmail className="text-4xl text-text_gray p-2 mx-1 hover:rounded-full hover:text-black hover:bg-white" />
+                    <MdEmail className="text-4xl text-text_gray p-2 mx-1 hover:mb-3 transition-all delay-100" />
                 </Link>
             </div>
         </div>

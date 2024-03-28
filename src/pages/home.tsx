@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="h-screen border-b border-gray-600 flex justify-center items-center gap-24"
+            className="min-h-screen border-b border-gray-600 flex justify-center items-center gap-24"
         >
             <div className="flex-1 flex flex-col items-center p-6 mt-16">
                 <h1 className="text-5xl text-purple-500 font-bold">
@@ -39,7 +39,7 @@ const Home = () => {
                 </Link>
             </div>
 
-            <div className="flex-1 mt-16">
+            <div className="flex-1 mt-16 my-4">
                 <Image
                     src="/icon.png"
                     alt="icon"
