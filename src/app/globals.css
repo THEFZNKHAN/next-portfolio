@@ -12,14 +12,6 @@
     display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 17, 17, 19;
-        --background-end-rgb: 17, 17, 19;
-    }
-}
-
 body {
     color: rgb(var(--foreground-rgb));
     background: linear-gradient(
