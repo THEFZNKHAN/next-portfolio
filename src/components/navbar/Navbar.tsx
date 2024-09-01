@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             </div>
 
             <div
-                className={`fixed top-16 right-0 w-64 pb-10 bg-light_gray border-l border-y rounded-l-xl text-white transform ${
+                className={`fixed top-20 right-0 w-64 pb-10 bg-light_gray border-l border-y rounded-l-xl text-white transform ${
                     isSidebarOpen ? "translate-x-0" : "translate-x-full"
                 } transition-transform duration-300 ease-in-out z-20 md:hidden`}
             >
