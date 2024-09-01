@@ -5,11 +5,11 @@ import Skills from "@/pages/skills";
 
 export default function App() {
     return (
-        <div className="w-10/12 m-auto p-4">
+        <div className="w-10/12 m-auto px-4">
             <Home />
             <Projects />
             <Skills />
-            <Contact />
+            {/* <Contact /> */}
         </div>
     );
 }

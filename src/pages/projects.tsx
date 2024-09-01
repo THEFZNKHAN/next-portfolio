@@ -94,7 +94,7 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" className="py-4 border-b border-gray-600">
+        <section id="projects" className="pb-8 border-b border-gray-600">
             <h2 className="text-5xl font-black mb-12 lg:mt-20 text-purple-500 text-center max-md:text-3xl">
                 <span className="text-white">My</span> Projects
             </h2>

@@ -11,116 +11,52 @@ interface SkillCategory {
     skills: Skill[];
 }
 
-interface AllSkillsType extends Array<SkillCategory> {}
-
-const AllSkills: AllSkillsType = [
+const AllSkills: SkillCategory[] = [
     {
         name: "Frontend",
         skills: [
-            {
-                name: "HTML",
-                icon: "/html.png",
-            },
-            {
-                name: "CSS",
-                icon: "/css.png",
-            },
-            {
-                name: "JavaScript",
-                icon: "/js.png",
-            },
-            {
-                name: "TypeScript",
-                icon: "/ts.png",
-            },
-            {
-                name: "ReactJs",
-                icon: "/react.png",
-            },
-            {
-                name: "NextJs",
-                icon: "/next-js.png",
-            },
-            {
-                name: "Tailwind CSS",
-                icon: "/tailwind.png",
-            },
-            {
-                name: "Material UI",
-                icon: "/material-ui.png",
-            },
+            { name: "HTML", icon: "/html.png" },
+            { name: "CSS", icon: "/css.png" },
+            { name: "JavaScript", icon: "/js.png" },
+            { name: "TypeScript", icon: "/ts.png" },
+            { name: "ReactJs", icon: "/react.png" },
+            { name: "NextJs", icon: "/next-js.png" },
+            { name: "Tailwind CSS", icon: "/tailwind.png" },
+            { name: "Material UI", icon: "/material-ui.png" },
         ],
     },
     {
         name: "Backend",
         skills: [
-            {
-                name: "NodeJS",
-                icon: "/node.png",
-            },
-            {
-                name: "Express",
-                icon: "/express.png",
-            },
-            {
-                name: "Next-Auth",
-                icon: "/next-auth.png",
-            },
-            {
-                name: "Prisma",
-                icon: "/prisma.png",
-            },
+            { name: "NodeJS", icon: "/node.png" },
+            { name: "Express", icon: "/express.png" },
+            { name: "Next-Auth", icon: "/next-auth.png" },
+            { name: "Prisma", icon: "/prisma.png" },
         ],
     },
     {
         name: "Database",
         skills: [
-            {
-                name: "MySql",
-                icon: "/mysql.png",
-            },
-            {
-                name: "MongoDB",
-                icon: "/mongodb.png",
-            },
-            {
-                name: "PostgreSQL",
-                icon: "/postgresql.png",
-            },
-            {
-                name: "Firebase",
-                icon: "/firebase.png",
-            },
+            { name: "MySql", icon: "/mysql.png" },
+            { name: "MongoDB", icon: "/mongodb.png" },
+            { name: "PostgreSQL", icon: "/postgresql.png" },
+            { name: "Firebase", icon: "/firebase.png" },
         ],
     },
     {
         name: "Language",
         skills: [
-            {
-                name: "Java",
-                icon: "/java.png",
-            },
+            { name: "Java", icon: "/java.png" },
+            { name: "Python", icon: "/python.png" },
         ],
     },
     {
         name: "Others",
         skills: [
-            {
-                name: "Bash",
-                icon: "/bash.png",
-            },
-            {
-                name: "Git",
-                icon: "/git.png",
-            },
-            {
-                name: "Github",
-                icon: "/github.png",
-            },
-            {
-                name: "Docker",
-                icon: "/docker.png",
-            },
+            { name: "Bash", icon: "/bash.png" },
+            { name: "Git", icon: "/git.png" },
+            { name: "Github", icon: "/github.png" },
+            { name: "Docker", icon: "/docker.png" },
         ],
     },
 ];
@@ -129,39 +65,35 @@ const Skills = () => {
     return (
         <div
             id="skills"
-            className="h-auto pt-[86px] flex flex-col text-center pb-12 border-b border-gray-600"
+            className="pb-8 border-b border-gray-600 flex flex-col items-center text-center bg-dark_gray"
         >
-            <h1 className="text-6xl font-black mt-5 mb-10 text-purple-500 font-mono">
+            <h1 className="text-5xl font-black mb-12 lg:mt-20 text-purple-500 text-center max-md:text-3xl">
                 <span className="text-white">My</span> Skills
             </h1>
-
-            <div className="flex flex-wrap justify-center items-center gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-lg">
                 {AllSkills.map((category) => (
                     <div
                         key={category.name}
-                        className="flex flex-col items-center border rounded-lg w-2/5 h-80"
+                        className="bg-light_gray rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
                     >
-                        <div className="bg-purple-600 w-full rounded-t-lg border-b">
-                            <h1 className="text-3xl font-bold text-white my-4 bg-purple font-mono">
-                                {category.name}
-                            </h1>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center items-center bg-light_gray rounded-b-lg w-full h-full">
+                        <h2 className="text-2xl font-bold text-white bg-purple-600 py-4">
+                            {category.name}
+                        </h2>
+                        <div className="flex flex-wrap w-full h-full justify-center items-center p-4 gap-5">
                             {category.skills.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className="flex flex-col items-center mx-5"
+                                    className="flex flex-col items-center"
                                 >
-                                    <div className="w-20 h-16 relative">
+                                    <div className="w-12 h-12 relative">
                                         <Image
                                             src={skill.icon}
                                             alt={skill.name}
-                                            fill
+                                            layout="fill"
                                             className="object-contain"
                                         />
                                     </div>
-                                    <p className="font-semibold text-text_gray mt-2 font-sans">
+                                    <p className="mt-2 text-gray-700 font-medium">
                                         {skill.name}
                                     </p>
                                 </div>
