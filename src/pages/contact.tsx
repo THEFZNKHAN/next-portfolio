@@ -7,33 +7,27 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className="h-screen pt-[86px] flex flex-col text-center pb-12 border-gray-600"
+            className="min-h-screen flex flex-col justify-center items-center py-16 bg-dark_gray text-white"
         >
-            <h1 className="text-6xl font-black mt-5 mb-10 text-purple-500 font-mono">
-                <span className="text-white">Contact</span> Me
+            <h1 className="text-5xl font-extrabold mb-12 text-purple-500">
+                Contact <span className="text-white">Me</span>
             </h1>
 
-            <div className="flex justify-center h-full items-center gap-5">
-                <div className="flex flex-1 flex-col items-center">
-                    <div className="flex flex-col items-start">
-                        <h1 className="text-4xl font-bold font-sans">
-                            Let&apos;s chat.
-                        </h1>
-                        <h1 className="text-4xl font-bold font-sans mt-3">
-                            Tell me about your projects.
-                        </h1>
-                        <p className="text-md font-sans mt-4">
-                            Let&apos;s create something together 🤘
-                        </p>
-                    </div>
-
-                    <div className="mt-10 bg-light_gray flex justify-evenly items-center rounded-md py-2 px-5">
-                        <CiMail className="bg-bg_black m-2 rounded-md p-2 text-5xl" />
-                        <div className="flex flex-col items-start ml-2">
-                            <h1 className="font-sans text-lg">Mail me at :</h1>
+            <div className="flex flex-col lg:flex-row items-center w-full max-w-5xl gap-10">
+                <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-3xl font-bold mb-4">
+                        Let&apos;s chat. Tell me about your projects.
+                    </h2>
+                    <p className="text-lg mb-8">
+                        Let&apos;s create something amazing together 🤘
+                    </p>
+                    <div className="bg-gray-800 p-6 rounded-lg flex items-center">
+                        <CiMail className="text-5xl text-purple-500 mr-4" />
+                        <div>
+                            <h3 className="text-lg">Mail me at:</h3>
                             <Link
                                 href="mailto:FKHAN20040@GMAIL.COM"
-                                className="text-purple-500 font-sans font-medium"
+                                className="text-purple-500 text-xl font-medium"
                             >
                                 FKHAN20040@GMAIL.COM
                             </Link>
@@ -41,49 +35,46 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-1 flex-col justify-center items-center mx-10 h-5/6 border rounded-xl bg-light_gray">
-                    <h1 className="text-3xl mb-5 text-extrabold font-sans">
+                <div className="flex-1 bg-gray-800 p-8 rounded-lg shadow-lg w-full">
+                    <h2 className="text-2xl font-semibold mb-6 text-center">
                         Send me a message 🚀
-                    </h1>
-                    <div className="w-full">
-                        <form
-                            action={process.env.FORMSPREE_LINK}
-                            method="POST"
-                            className="flex flex-col items-center gap-4 font-medium text-white font-sans"
+                    </h2>
+                    <form
+                        action={process.env.FORMSPREE_LINK}
+                        method="POST"
+                        className="flex flex-col gap-6"
+                    >
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            autoComplete="off"
+                            required
+                            className="w-full h-12 rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            autoComplete="off"
+                            required
+                            className="w-full h-12 rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
+                        />
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols={30}
+                            rows={5}
+                            placeholder="Enter your message"
+                            className="w-full rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
+                        />
+                        <button
+                            type="submit"
+                            className="w-full py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold flex justify-center items-center gap-2 transition-all duration-300"
                         >
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                autoComplete="off"
-                                required
-                                className="w-11/12 h-10 rounded-lg p-4 bg-gray-600 outline-slate-500 placeholder-slate-300 placeholder-opacity-80"
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                autoComplete="off"
-                                required
-                                className="w-11/12 h-10 rounded-lg p-4 bg-gray-600 outline-slate-500 placeholder-slate-300 placeholder-opacity-80"
-                            />
-                            <textarea
-                                name="message"
-                                id="message"
-                                cols={30}
-                                rows={7}
-                                placeholder="Enter your message"
-                                className="w-11/12 rounded-lg p-4 bg-gray-600 outline-slate-500 placeholder-slate-300 placeholder-opacity-80"
-                            />
-                            <button
-                                type="submit"
-                                className="text-lg rounded-lg border bg-purple-600 font-semibold text-text_gray py-1 px-6 flex items-center gap-2 hover:bg-purple-700 hover:rounded-md transition-all delay-100"
-                            >
-                                SEND{" "}
-                                <FaArrowAltCircleRight className="text-2xl" />
-                            </button>
-                        </form>
-                    </div>
+                            SEND <FaArrowAltCircleRight className="text-2xl" />
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
