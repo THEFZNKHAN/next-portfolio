@@ -1,48 +1,71 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const ProjectItems = [
+type ProjectItem = {
+    title: string;
+    technologies: string;
+    image: string;
+    github: string;
+    demo: string;
+};
+
+const projects: ProjectItem[] = [
+    {
+        title: "Price Tracker",
+        technologies: "NextJs, TypeScript, TailwindCSS, MongoDB",
+        image: "/price-tracker.png",
+        github: "https://github.com/THEFZNKHAN/price-tracker",
+        demo: "https://v-price-tracker.vercel.app/",
+    },
     {
         title: "Spotify Clone",
-        technologies: "React, JavaScript, CSS, gh-pages",
+        technologies: "React, JavaScript, CSS",
         image: "/spotify.png",
         github: "https://github.com/THEFZNKHAN/spotify-clone",
         demo: "https://thefznkhan.github.io/spotify-clone/",
     },
     {
         title: "React Portfolio",
-        technologies: "React, JavaScript, CSS, gh-pages",
+        technologies: "ReactJS, JavaScript, CSS",
         image: "/portfolio-react.png",
         github: "https://github.com/THEFZNKHAN/portfolio-react",
         demo: "https://thefznkhan.github.io/portfolio-react/",
     },
     {
         title: "Thoughts Agency",
-        technologies: "NextJS, Next-Auth, TypeScript, TailwindCSS, Vercel",
+        technologies: "NextJS, TypeScript, TailwindCSS, Vercel",
         image: "/thought-agency.png",
         github: "https://github.com/THEFZNKHAN/nextjs-learn",
         demo: "https://github.com/THEFZNKHAN/nextjs-learn",
     },
     {
         title: "NextJs Appwrite",
-        technologies:
-            "NextJS, Next-Auth, Appwrite, TypeScript, TailwindCSS, Vercel",
+        technologies: "NextJS, TypeScript, TailwindCSS, Vercel",
         image: "/nextjs-appwrite.png",
         github: "https://github.com/THEFZNKHAN/nextjs-appwrite",
         demo: "https://nextjs-appwrite-mocha.vercel.app/",
     },
     {
+        title: "Tic Tac Toe",
+        technologies: "ReactJS, TailwindCSS, JavaScript, Github",
+        image: "/tic-tac-toe.png",
+        github: "https://github.com/THEFZNKHAN/tic-tac-toe",
+        demo: "https://thefznkhan.github.io/tic-tac-toe/",
+    },
+    {
         title: "Quote Generator",
-        technologies: "HTML, CSS, JavaScript, JSON",
+        technologies: "HTML, CSS, JavaScript",
         image: "/quote-generator.png",
         github: "https://github.com/THEFZNKHAN/QuoteGenerator",
         demo: "https://thefznkhan.github.io/QuoteGenerator/",
     },
     {
         title: "QR Code Generator",
-        technologies: "HTML, CSS, JavaScript, QR Code Library",
+        technologies: "HTML, CSS, JavaScript",
         image: "/qr-generator.png",
         github: "https://github.com/THEFZNKHAN/QR_Code_Generator",
         demo: "https://thefznkhan.github.io/QR_Code_Generator/",
@@ -54,71 +77,99 @@ const ProjectItems = [
         github: "https://github.com/THEFZNKHAN/Calculator",
         demo: "https://thefznkhan.github.io/Calculator/",
     },
-    {
-        title: "Web Calculator",
-        technologies: "HTML, CSS, JavaScript",
-        image: "/web-calculator.png",
-        github: "https://github.com/THEFZNKHAN/Web_Calculator",
-        demo: "https://thefznkhan.github.io/Web_Calculator/",
-    },
 ];
 
 const Projects = () => {
-    return (
-        <div
-            id="projects"
-            className="h-auto pt-[86px] flex flex-col text-center pb-10 border-b border-gray-600"
-        >
-            <h1 className="text-6xl font-black mt-5 mb-10 text-purple-500 font-mono">
-                <span className="text-white">My</span> Projects
-            </h1>
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [currentImage, setCurrentImage] = useState<string | null>(null);
 
-            <div className="flex flex-wrap justify-evenly">
-                {ProjectItems.map((item, index) => (
+    const openModal = (image: string) => {
+        setCurrentImage(image);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+        setCurrentImage(null);
+    };
+
+    return (
+        <section id="projects" className="py-4 border-b border-gray-600">
+            <h2 className="text-5xl font-black mb-12 lg:mt-20 text-purple-500 text-center max-md:text-3xl">
+                <span className="text-white">My</span> Projects
+            </h2>
+
+            <div className="flex flex-wrap justify-center gap-12">
+                {projects.map((project, index) => (
                     <div
                         key={index}
-                        className=" w-5/12 rounded-xl border h-[400px] my-6 shadow-md hover:shadow-purple-500 hover:shadow-md cursor-pointer"
-                        title={item.title}
+                        className="w-full md:w-5/12 lg:w-1/3 xl:w-1/4 bg-light_gray rounded-xl shadow-md hover:shadow-purple-500 transition-shadow duration-300"
+                        title={project.title}
+                        onClick={() => openModal(project.image)}
                     >
-                        <div className="h-4/5 relative">
+                        <div className="relative h-64 max-lg:h-40 cursor-pointer">
                             <Image
-                                src={item.image}
-                                alt={item.title}
-                                fill
-                                className="object-contain rounded-t-xl"
+                                src={project.image}
+                                alt={project.title}
+                                layout="fill"
+                                className="object-cover rounded-t-xl"
                             />
                         </div>
-                        <div className="h-1/5 bg-light_gray rounded-b-xl flex justify-between items-center border-t">
-                            <div className="px-4">
-                                <h1 className="text-2xl font-bold text-text_gray font-mono">
-                                    {item.title}
-                                </h1>
-                                <p className=" text-base font-medium text-gray-400 font-sans">
-                                    {item.technologies}
-                                </p>
-                            </div>
-                            <div className="flex justify-between items-center px-4">
+                        <div className="p-4">
+                            <h3 className="text-2xl max-md:text-xl font-bold text-text_gray mb-2">
+                                {project.title}
+                            </h3>
+                            <p className="text-sm text-gray-400 mb-4">
+                                {project.technologies}
+                            </p>
+                            <div className="flex justify-between items-center">
                                 <Link
-                                    href={item.github}
-                                    className="text-5xl mr-4"
+                                    href={project.github}
+                                    className="text-2xl text-gray-600 hover:text-black"
+                                    title="GitHub Repository"
                                 >
-                                    <FaGithub
-                                        className="hover:text-black hover:rounded-full p-1 hover:bg-white"
-                                        title="github repo"
-                                    />
+                                    <FaGithub className="hover:text-white p-1 transition-colors duration-300" />
                                 </Link>
-                                <Link href={item.demo} className="text-4xl">
-                                    <FaExternalLinkAlt
-                                        className="hover:text-black hover:rounded-lg p-1 hover:bg-white"
-                                        title="live demo"
-                                    />
+                                <Link
+                                    href={project.demo}
+                                    className="text-2xl text-gray-600 hover:text-black"
+                                    title="Live Demo"
+                                >
+                                    <FaExternalLinkAlt className="hover:text-white p-1 transition-colors duration-300" />
                                 </Link>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-        </div>
+
+            {isModalOpen && currentImage && (
+                <div
+                    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
+                    onClick={closeModal}
+                >
+                    <div
+                        className="relative max-w-3xl w-full p-4"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <Image
+                            src={currentImage}
+                            alt="Project Image"
+                            layout="responsive"
+                            width={800}
+                            height={600}
+                            className="rounded-lg"
+                        />
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-4 right-4 text-2xl text-white font-extrabold hover:text-gray-400 transition-colors"
+                        >
+                            &times;
+                        </button>
+                    </div>
+                </div>
+            )}
+        </section>
     );
 };
 
