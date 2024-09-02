@@ -94,12 +94,15 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" className="pb-8 border-b border-gray-600">
-            <h2 className="text-5xl font-black mb-12 lg:mt-20 text-purple-500 text-center max-md:text-3xl">
+        <section
+            id="projects"
+            className="w-11/12 pb-8 border-b border-gray-600"
+        >
+            <h2 className="text-5xl font-black mb-8 lg:mt-20 text-purple-500 text-center max-md:text-4xl max-md:mt-5">
                 <span className="text-white">My</span> Projects
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-12">
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
                 {projects.map((project, index) => (
                     <div
                         key={index}

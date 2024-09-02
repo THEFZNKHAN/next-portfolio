@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="lg:min-h-screen border-b border-gray-600 flex flex-col lg:flex-row justify-center items-center gap-x-12"
+            className="lg:min-h-screen w-11/12 border-b border-gray-600 flex flex-col lg:flex-row justify-center items-center gap-x-12 pb-8"
         >
             <div className="flex-1 order-2 lg:order-1 flex flex-col items-center text-center py-6 mt-16 max-md:mt-8">
                 <h1 className="text-5xl max-md:text-3xl max-xl:text-4xl text-purple-500 font-bold">

@@ -7,27 +7,27 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className="min-h-screen flex flex-col justify-center items-center py-16 bg-dark_gray text-white"
+            className="min-h-screen w-11/12 flex flex-col justify-center items-center py-16 bg-dark_gray text-white"
         >
-            <h1 className="text-5xl font-extrabold mb-12 text-purple-500">
+            <h1 className="text-5xl max-md:text-4xl font-extrabold mb-12 text-purple-500">
                 Contact <span className="text-white">Me</span>
             </h1>
 
             <div className="flex flex-col lg:flex-row items-center w-full max-w-5xl gap-10">
                 <div className="flex-1 text-center lg:text-left">
-                    <h2 className="text-3xl font-bold mb-4">
+                    <h2 className="text-3xl max-md:text-xl font-bold mb-4">
                         Let&apos;s chat. Tell me about your projects.
                     </h2>
-                    <p className="text-lg mb-8">
+                    <p className="text-lg max-md:text-base mb-8">
                         Let&apos;s create something amazing together 🤘
                     </p>
-                    <div className="bg-gray-800 p-6 rounded-lg flex items-center">
-                        <CiMail className="text-5xl text-purple-500 mr-4" />
+                    <div className="bg-light_gray p-6 rounded-lg flex items-center">
+                        <CiMail className="text-5xl text-text_gray mr-4" />
                         <div>
                             <h3 className="text-lg">Mail me at:</h3>
                             <Link
                                 href="mailto:FKHAN20040@GMAIL.COM"
-                                className="text-purple-500 text-xl font-medium"
+                                className="text-purple-500 text-xl max-md:text-lg font-medium font-sans"
                             >
                                 FKHAN20040@GMAIL.COM
                             </Link>
@@ -35,7 +35,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="flex-1 bg-gray-800 p-8 rounded-lg shadow-lg w-full">
+                <div className="flex-1 bg-light_gray p-8 rounded-lg shadow-lg w-full">
                     <h2 className="text-2xl font-semibold mb-6 text-center">
                         Send me a message 🚀
                     </h2>

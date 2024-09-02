@@ -65,9 +65,9 @@ const Skills = () => {
     return (
         <div
             id="skills"
-            className="pb-8 border-b border-gray-600 flex flex-col items-center text-center bg-dark_gray"
+            className="w-11/12 border-b border-gray-600 flex flex-col items-center text-center bg-dark_gray pb-8"
         >
-            <h1 className="text-5xl font-black mb-12 lg:mt-20 text-purple-500 text-center max-md:text-3xl">
+            <h1 className="text-5xl font-black mb-8 lg:mt-16 text-purple-500 text-center max-md:text-4xl max-md:mt-5">
                 <span className="text-white">My</span> Skills
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-lg">
@@ -79,7 +79,7 @@ const Skills = () => {
                         <h2 className="text-2xl font-bold text-white bg-purple-600 py-4">
                             {category.name}
                         </h2>
-                        <div className="flex flex-wrap w-full h-full justify-center items-center p-4 gap-5">
+                        <div className="flex flex-wrap w-full h-full justify-center items-center p-4 gap-5 max-lg:gap-y-3">
                             {category.skills.map((skill) => (
                                 <div
                                     key={skill.name}
