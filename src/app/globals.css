@@ -21,7 +21,6 @@ body {
         )
         rgb(var(--background-start-rgb));
     font-family: "Inter", sans-serif;
-    cursor: url("../../public/cursor.svg"), auto;
 }
 
 html,
@@ -32,6 +31,7 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     box-sizing: inherit;
+    cursor: url("../../public/cursor.svg"), auto;
 }
 
 .custom-cursor {
@@ -55,8 +55,8 @@ body {
     border: 8px solid gray;
     border-radius: 50%;
     opacity: 0.5;
-    top: -8px;
-    left: -8px;
+    top: -1px;
+    left: -1px;
     animation: cursorAnim2 0.5s infinite alternate;
 }
 
@@ -71,10 +71,10 @@ body {
 
 @keyframes cursorAnim2 {
     from {
-        transform: scale(1);
+        transform: scale(0.4);
     }
     to {
-        transform: scale(0.4);
+        transform: scale(1.5);
     }
 }
 
