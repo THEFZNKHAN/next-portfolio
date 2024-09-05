@@ -21,8 +21,8 @@ const AllSkills: SkillCategory[] = [
             { name: "TypeScript", icon: "/ts.png" },
             { name: "ReactJs", icon: "/react.png" },
             { name: "NextJs", icon: "/next-js.png" },
-            { name: "Tailwind CSS", icon: "/tailwind.png" },
-            { name: "Material UI", icon: "/material-ui.png" },
+            { name: "TailwindCSS", icon: "/tailwind.png" },
+            { name: "MaterialUI", icon: "/material-ui.png" },
         ],
     },
     {
@@ -89,11 +89,11 @@ const Skills = () => {
                                         <Image
                                             src={skill.icon}
                                             alt={skill.name}
-                                            layout="fill"
+                                            fill
                                             className="object-contain"
                                         />
                                     </div>
-                                    <p className="mt-2 text-gray-700 font-medium">
+                                    <p className="mt-2 text-text_gray font-mono font-medium">
                                         {skill.name}
                                     </p>
                                 </div>
