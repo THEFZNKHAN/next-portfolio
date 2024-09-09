@@ -29,7 +29,7 @@ const CustomCursor = () => {
         };
     }, []);
 
-    return <div className="custom-cursor" />;
+    return <div className="custom-cursor max-md:hidden" />;
 };
 
 export default CustomCursor;
