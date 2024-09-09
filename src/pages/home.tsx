@@ -1,4 +1,4 @@
-import React from "react";
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
@@ -40,13 +40,15 @@ const Home = () => {
             </div>
 
             <div className="flex-1 max-lg:flex-none order-1 lg:order-2 mt-8 lg:mt-16 w-full max-w-xs lg:max-w-lg max-lg:pt-20">
-                <Image
-                    src="/icon.png"
-                    alt="icon"
-                    width={500}
-                    height={500}
-                    className="object-contain mx-auto rounded-xl max-lg:rounded-full max-md:w-60 shadow-md shadow-purple-500"
-                />
+                <Suspense fallback={"Loading..."}>
+                    <Image
+                        src="/icon.png"
+                        alt="icon"
+                        width={500}
+                        height={500}
+                        className="object-contain mx-auto rounded-xl max-lg:rounded-full max-md:w-60 shadow-md shadow-purple-500"
+                    />
+                </Suspense>
             </div>
         </div>
     );

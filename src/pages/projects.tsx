@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -98,25 +98,30 @@ const Projects = () => {
             id="projects"
             className="w-11/12 pb-8 border-b border-gray-600"
         >
-            <h2 className="text-5xl font-black mb-8 lg:mt-20 text-purple-500 text-center max-md:text-4xl max-md:mt-5">
+            <h2 className="text-5xl font-black mb-12 mt-16 text-purple-500 text-center max-md:text-4xl max-md:mt-5">
                 <span className="text-white">My</span> Projects
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-12">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="w-full md:w-5/12 lg:w-1/3 xl:w-1/4 bg-light_gray rounded-xl shadow-md hover:shadow-purple-500 transition-shadow duration-300"
+                        className="w-full md:w-5/12 lg:w-1/3 xl:w-1/4 bg-light_gray border border-gray-700 rounded-xl shadow-md hover:shadow-purple-500 transition-shadow duration-300"
                         title={project.title}
                         onClick={() => openModal(project.image)}
                     >
-                        <div className="relative h-64 max-lg:h-40 cursor-pointer">
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover rounded-t-xl"
-                            />
+                        <div
+                            className="relative mx-3 -mt-6 h-40 overflow-hidden rounded-xl cursor-pointer "
+                            onClick={() => openModal(project.image)}
+                        >
+                            <Suspense fallback={"Loading..."}>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover rounded-t-xl"
+                                />
+                            </Suspense>
                         </div>
                         <div className="p-4">
                             <h3 className="text-2xl max-md:text-xl font-bold text-text_gray mb-2">

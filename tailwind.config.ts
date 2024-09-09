@@ -18,6 +18,20 @@ const config: Config = {
         bg_black: "#111113",
         text_gray: "#e5e5e5",
       },
+      animation: {
+        blink: "blinkCursor 0.7s steps(2) infinite",
+        typeAndDelete: "typeAndDelete 4s steps(11) infinite",
+      },
+      keyframes: {
+        blinkCursor: {
+          "50%": { borderRightColor: "transparent" },
+        },
+        typeAndDelete: {
+          "0%, 10%": { width: "0" },
+          "45%, 55%": { width: "6.2em" },
+          "90%, 100%": { width: "0" },
+        },
+      },
     },
   },
   plugins: [],

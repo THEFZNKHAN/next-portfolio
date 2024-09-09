@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 
 interface Skill {
     name: string;
@@ -86,12 +86,14 @@ const Skills = () => {
                                     className="flex flex-col items-center"
                                 >
                                     <div className="w-12 h-12 relative">
-                                        <Image
-                                            src={skill.icon}
-                                            alt={skill.name}
-                                            fill
-                                            className="object-contain"
-                                        />
+                                        <Suspense fallback={"Loading..."}>
+                                            <Image
+                                                src={skill.icon}
+                                                alt={skill.name}
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </Suspense>
                                     </div>
                                     <p className="mt-2 text-text_gray font-mono font-medium">
                                         {skill.name}
