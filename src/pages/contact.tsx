@@ -50,7 +50,7 @@ const Contact = () => {
                             placeholder="Name"
                             autoComplete="off"
                             required
-                            className="w-full h-12 rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
+                            className="w-full h-12 rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-gray-600"
                         />
                         <input
                             type="email"
@@ -58,7 +58,7 @@ const Contact = () => {
                             placeholder="Email"
                             autoComplete="off"
                             required
-                            className="w-full h-12 rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
+                            className="w-full h-12 rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-gray-600"
                         />
                         <textarea
                             name="message"
@@ -66,7 +66,7 @@ const Contact = () => {
                             cols={30}
                             rows={5}
                             placeholder="Enter your message"
-                            className="w-full rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
+                            className="w-full rounded-lg p-4 bg-gray-700 outline-none placeholder-gray-400 focus:ring-2 focus:ring-gray-600"
                         />
                         <button
                             type="submit"
