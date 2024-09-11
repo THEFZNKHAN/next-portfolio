@@ -1,6 +1,6 @@
 # NEXT PORTFOLIO 
 
-Welcome to my personal portfolio website, built using NextJS, TypeScript and Tailwind CSS. This website showcases my work, skills, and provides a way to connect with me.
+Welcome to my personal portfolio website, built using NextJS, TypeScript, and Tailwind CSS. This website showcases my work, and skills, and provides a way to connect with me.
 
 ## 🏠 Home
 ![home](https://github.com/THEFZNKHAN/next-portfolio/assets/124388165/60e96caf-2288-4472-afa7-60f2f9d718b4)
@@ -10,7 +10,7 @@ Welcome to my personal portfolio website, built using NextJS, TypeScript and Tai
 Browse my projects in the "Projects" section:
 - Each project comes with a GitHub repository link
 - If available, there are website links for the projects
-![projects](https://github.com/THEFZNKHAN/next-portfolio/assets/124388165/5abd820e-8055-456c-8932-ea250142b71a)
+![image](https://github.com/user-attachments/assets/29d5df7a-5a3a-40c7-864f-86fd5b68fdd4)
 
 
 ## 💡 Skills 
@@ -30,7 +30,7 @@ You can easily get in touch with me in the "Contact Me" section:
 ![footer](https://github.com/THEFZNKHAN/next-portfolio/assets/124388165/83cac11f-d6e1-4396-9fb0-5be86fa1b517)
 
 
-Thank you for visiting my portfolio. If you have any questions, or suggestions, or just want to connect, please don't hesitate to reach out.
+Thank you for visiting my portfolio. If you have any questions, suggestions, or want to connect, please don't hesitate to reach out.
 
 Happy coding!
 
