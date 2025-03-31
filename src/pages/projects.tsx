@@ -15,6 +15,13 @@ type ProjectItem = {
 
 const projects: ProjectItem[] = [
     {
+        title: "Next Docs",
+        technologies: "NextJs, TypeScript, TailwindCSS, Clerk, LiveBlocks",
+        image: "/next-docs.png",
+        github: "https://github.com/THEFZNKHAN/next-docs",
+        demo: "https://next-docs-beta.vercel.app/",
+    },
+    {
         title: "Price Tracker",
         technologies: "NextJs, TypeScript, TailwindCSS, MongoDB",
         image: "/price-tracker.png",
