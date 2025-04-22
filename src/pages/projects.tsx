@@ -22,6 +22,13 @@ const projects: ProjectItem[] = [
         demo: "https://next-docs-beta.vercel.app/",
     },
     {
+        title: "Balanced Tree Visualizer",
+        technologies: "NextJs, TypeScript, TailwindCSS, Framer-Motion, Radix UI, Lucid React",
+        image: "/btv.png",
+        github: "https://github.com/THEFZNKHAN/balanced-tree-visualizer",
+        demo: "https://balanced-tree-visualizer.vercel.app/",
+    },
+    {
         title: "Price Tracker",
         technologies: "NextJs, TypeScript, TailwindCSS, MongoDB",
         image: "/price-tracker.png",
