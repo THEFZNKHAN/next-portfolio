@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FaDiscord, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -18,6 +19,9 @@ const Footer = () => {
                 <div className="flex justify-center md:justify-end items-center mt-4 md:mt-0">
                     <Link href="https://github.com/thefznkhan">
                         <FaGithub className="text-3xl md:text-4xl p-2 text-gray-400 mx-1 max-md:p-1 hover:text-white transition-colors duration-300" />
+                    </Link>
+                    <Link href="https://leetcode.com/u/thefznkhan/">
+                        <SiLeetcode className="text-3xl md:text-4xl p-2 text-gray-400 mx-1 max-md:p-1 hover:text-white transition-colors duration-300" />
                     </Link>
                     <Link href="https://www.linkedin.com/in/thefznkhan/">
                         <FaLinkedin className="text-3xl md:text-4xl p-2 text-gray-400 mx-1 max-md:p-1 hover:text-white transition-colors duration-300" />
