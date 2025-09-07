@@ -36,7 +36,35 @@ const projects: ProjectItem[] = [
         demo: "https://v-price-tracker.vercel.app/",
     },
     {
-        title: "Spotify Clone",
+        title: "Modern Quiz App",
+        technologies: "NextJs, TypeScript, TailwindCSS, Shadcn UI, MongoDB, React Quill",
+        image: "/next-blog.png",
+        github: "https://github.com/THEFZNKHAN/nextblog",
+        demo: "https://nextblog-one-lilac.vercel.app/",
+    },
+    {
+        title: "NextBlog",
+        technologies: "NextJs, JavaScript, TailwindCSS, Shadcn UI, TriviaAPI",
+        image: "/quiz-app.png",
+        github: "https://github.com/THEFZNKHAN/modern-quiz-app",
+        demo: "https://modern-quiz-app-psi.vercel.app/",
+    },
+    {
+        title: "Franchise Dashboard",
+        technologies: "NextJs, JavaScript, TailwindCSS, Shadcn UI",
+        image: "/franchise-dashboard.png",
+        github: "https://github.com/THEFZNKHAN/franchise-dashboard",
+        demo: "https://franchise-dashboard-plum.vercel.app/",
+    },
+    {
+        title: "Soft Sell",
+        technologies: "NextJs, TypeScript, TailwindCSS, Shadcn UI, Zod, Framer Motion",
+        image: "/soft-sell.png",
+        github: "https://github.com/THEFZNKHAN/softsell",
+        demo: "https://soft-sell-pied.vercel.app/",
+    },
+    {
+        title: "Spotify Frontend Clone",
         technologies: "React, JavaScript, CSS",
         image: "/spotify.png",
         github: "https://github.com/THEFZNKHAN/spotify-clone",
@@ -120,7 +148,7 @@ const Projects = () => {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="w-full md:w-5/12 lg:w-1/3 xl:w-1/4 bg-light_gray border border-gray-700 rounded-xl shadow-md hover:shadow-purple-500 transition-shadow duration-300"
+                        className="w-full md:w-5/12 lg:w-1/3 xl:w-1/4 bg-light_gray border border-gray-700 rounded-xl shadow-md hover:shadow-purple-500 transition-shadow duration-300 flex flex-col"
                         title={project.title}
                         onClick={() => openModal(project.image)}
                     >
@@ -137,14 +165,14 @@ const Projects = () => {
                                 />
                             </Suspense>
                         </div>
-                        <div className="p-4">
+                        <div className="p-4 flex flex-col flex-grow">
                             <h3 className="text-2xl max-md:text-xl font-bold text-text_gray mb-2">
                                 {project.title}
                             </h3>
                             <p className="text-sm text-gray-400 mb-4">
                                 {project.technologies}
                             </p>
-                            <div className="flex justify-between items-center">
+                            <div className="flex justify-between items-center mt-auto">
                                 <Link
                                     href={project.github}
                                     className="text-2xl text-gray-600 hover:text-black"
