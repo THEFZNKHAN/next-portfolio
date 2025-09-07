@@ -42,7 +42,7 @@ const Home = () => {
             <div className="flex-1 max-lg:flex-none order-1 lg:order-2 mt-8 lg:mt-16 w-full max-w-xs lg:max-w-lg max-lg:pt-20">
                 <Suspense fallback={"Loading..."}>
                     <Image
-                        src="/icon.png"
+                        src="/profile.png"
                         alt="icon"
                         width={500}
                         height={500}
